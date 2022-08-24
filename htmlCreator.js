@@ -7,8 +7,8 @@ export const updateInterface = (location, data, latitude, longitude) => {
              )} &#8451;</strong> ${Math.round(data.daily[0].temp.min)} &#8451;`;
 
   let map = `<iframe
-      width="500"
-      height="400"
+      width="270"
+      height="280"
       frameborder="0"
       src="https://www.bing.com/maps/embed?h=400&w=500&cp=${latitude}~${longitude}&lvl=12.371139810340651&typ=d&sty=r&src=SHELL&FORM=MBEDV8"
       scrolling="no"

@@ -1,0 +1,10 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.pageContainer {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+/*# sourceMappingURL=styles.css.map */
