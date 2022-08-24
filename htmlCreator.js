@@ -56,3 +56,12 @@ export const generateForecast = (day) => {
   )} &#8451;</strong> ${Math.round(day.temp.min)} &#8451;</p>
             </div>`;
 };
+
+export const printError = (error) => {
+  let errorMessage = `<h2>Your location could not be found, please try searching for a city instead.</h2>`;
+  let forecasetTitle = "";
+
+  document.getElementById("location").innerHTML = errorMessage;
+  document.getElementById("error").innerHTML = "";
+  document.getElementById("sevenDayTitle").innerHTML = "";
+};

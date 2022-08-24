@@ -1,5 +1,5 @@
 // import modules
-import { updateInterface } from "./htmlCreator.js";
+import { updateInterface, printError } from "./htmlCreator.js";
 
 // DOM references
 const searchLocation = document.getElementById("searchLocation");
@@ -11,6 +11,7 @@ navigator.geolocation.getCurrentPosition(
   },
   (error) => {
     console.log(error);
+    printError(error);
   }
 );
 
