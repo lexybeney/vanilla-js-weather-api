@@ -5,15 +5,39 @@ export const updateInterface = (
   longitude,
   currentIcon
 ) => {
+  //create timestamps for sunrise and sunset
+  const sunrise = new Date(data.current.sunrise * 1000).toLocaleTimeString(
+    undefined,
+    { timeStyle: "short" }
+  );
+  const sunset = new Date(data.current.sunset * 1000).toLocaleTimeString(
+    undefined,
+    { timeStyle: "short" }
+  );
+
   // current day weather
   let html = `<h1>${location}</h1>
-            <h2>Today</h2>
-            <h3>${Math.round(data.current.temp)}&#8451;</h3>
-            <img src=${currentIcon} />
-            <p>${data.current.weather[0].description}</p>
-             <p><strong>${Math.round(
+        <div class="currentDetails">
+          <h2 class="currentTemp" >${Math.round(data.current.temp)}&deg;</h2>
+          <p class="currentDescription">${
+            data.current.weather[0].description
+          }</p>
+          <img class="currentIcon" src=${currentIcon} />
+          <div class="">
+             <p class="currentHigh" >max ${Math.round(
                data.daily[0].temp.max
-             )} &#8451;</strong> ${Math.round(data.daily[0].temp.min)} &#8451;`;
+             )} &deg; 
+             </p>
+             <p class="currentLow"> min ${Math.round(
+               data.daily[0].temp.min
+             )} &deg;
+             </p>
+             <p class="sunrise"> ${sunrise}
+             </p>
+             <p class="sunset"> ${sunset}
+             </p>
+          </div>
+        </div>`;
 
   // let map = `<iframe
   //     width="270"
@@ -61,9 +85,9 @@ export const generateForecast = (day) => {
 
   return `<div id=${day.dt}><h3>${formattedDate}${dateEnd}</h3>
   <img src=https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png />
-  <p><strong>${Math.round(day.temp.max)} &#8451;</strong> ${Math.round(
+  <p><strong>${Math.round(day.temp.max)} &deg;</strong> ${Math.round(
     day.temp.min
-  )} &#8451;</p>
+  )} &deg;</p>
             </div>`;
 };
 
