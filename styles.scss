@@ -1,8 +1,52 @@
 html {
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+$light: #e9e2d0;
+$pink: #ea9085;
+$purple: #6e5773;
+$dark: #4f323b;
+
+h1 {
+  color: #4f323b;
+  text-align: center;
+}
+h2 {
+  color: $dark;
+}
+
+h3 {
+  color: #6e5773;
 }
 
 .pageContainer {
-  margin: 0 auto;
+  margin: 20px auto;
   max-width: 1100px;
+}
+
+.search {
+  //   border: $pink 1px solid;
+  border-radius: 15px;
+  box-shadow: #ea9085 3px 3px 10px -3px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 15px;
+    margin: 0px 5px;
+  }
+
+  input {
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.location {
+  text-align: center;
 }

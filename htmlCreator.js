@@ -1,29 +1,39 @@
-export const updateInterface = (location, data, latitude, longitude) => {
+export const updateInterface = (
+  location,
+  data,
+  latitude,
+  longitude,
+  currentIcon
+) => {
   // current day weather
   let html = `<h1>${location}</h1>
             <h2>Today</h2>
+            <h3>${Math.round(data.current.temp)}&#8451;</h3>
+            <img src=${currentIcon} />
+            <p>${data.current.weather[0].description}</p>
              <p><strong>${Math.round(
                data.daily[0].temp.max
              )} &#8451;</strong> ${Math.round(data.daily[0].temp.min)} &#8451;`;
 
-  let map = `<iframe
-      width="270"
-      height="280"
-      frameborder="0"
-      src="https://www.bing.com/maps/embed?h=400&w=500&cp=${latitude}~${longitude}&lvl=12.371139810340651&typ=d&sty=r&src=SHELL&FORM=MBEDV8"
-      scrolling="no"
-    >
-    </iframe>`;
+  // let map = `<iframe
+  //     width="270"
+  //     height="280"
+  //     frameborder="0"
+  //     src="https://www.bing.com/maps/embed?h=400&w=500&cp=${latitude}~${longitude}&lvl=12.371139810340651&typ=d&sty=r&src=SHELL&FORM=MBEDV8"
+  //     scrolling="no"
+  //   >
+  //   </iframe>`;
 
   document.getElementById("location").innerHTML = html;
   document.getElementById("error").innerHTML = "";
-  document.getElementById("map").innerHTML = map;
+  // document.getElementById("map").innerHTML = map;
 
   // next 6 days forecast
   let forecast = data.daily;
   let htmlForecast = "";
 
   const sevenDays = forecast.splice(1, 7);
+  htmlForecast += `<h2 id="sevenDayTitle">The next seven days</h2>`;
   for (const day of sevenDays) {
     htmlForecast += generateForecast(day);
     document.getElementById("forecastDays").innerHTML = htmlForecast;
@@ -49,11 +59,11 @@ export const generateForecast = (day) => {
     weekday: "short",
   });
 
-  return `<div id=${
-    day.dt
-  }><h3>${formattedDate}${dateEnd}</h3><p><strong>${Math.round(
-    day.temp.max
-  )} &#8451;</strong> ${Math.round(day.temp.min)} &#8451;</p>
+  return `<div id=${day.dt}><h3>${formattedDate}${dateEnd}</h3>
+  <img src=https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png />
+  <p><strong>${Math.round(day.temp.max)} &#8451;</strong> ${Math.round(
+    day.temp.min
+  )} &#8451;</p>
             </div>`;
 };
 
