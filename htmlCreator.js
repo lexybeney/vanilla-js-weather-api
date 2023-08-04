@@ -18,25 +18,31 @@ export const updateInterface = (
   // current day weather
   let html = `<h1>${location}</h1>
         <div class="currentDetails">
+          <div class="currentFirst">
           <h2 class="currentTemp" >${Math.round(data.current.temp)}&deg;</h2>
+            <img class="currentIcon" src=${currentIcon} />
+          </div>
           <p class="currentDescription">${
             data.current.weather[0].description
           }</p>
-          <img class="currentIcon" src=${currentIcon} />
-          <div class="">
-             <p class="currentHigh" >max ${Math.round(
-               data.daily[0].temp.max
-             )} &deg; 
-             </p>
-             <p class="currentLow"> min ${Math.round(
-               data.daily[0].temp.min
-             )} &deg;
-             </p>
-             <p class="sunrise"> ${sunrise}
-             </p>
-             <p class="sunset"> ${sunset}
-             </p>
-          </div>
+        </div>
+        <div class="extraDetails">
+             <div class="currentHigh">
+                <p>max</p>
+                <p>${Math.round(data.daily[0].temp.max)} &deg;</p>
+             </div>
+             <div class="currentLow">
+                <p>min</p>
+                <p>${Math.round(data.daily[0].temp.min)} &deg;</p>
+             </div>
+             <div class="sunrise">
+                <p>sunrise</p>
+                <p>${sunrise}</p>
+             </div>
+             <div class="sunset">
+                <p>sunset</p>
+                <p>${sunset}</p>
+             </div>
         </div>`;
 
   // let map = `<iframe
@@ -50,6 +56,8 @@ export const updateInterface = (
 
   document.getElementById("location").innerHTML = html;
   document.getElementById("error").innerHTML = "";
+  document.getElementById("loading").innerHTML = "";
+  document.getElementById("loading").style.height = "0px";
   // document.getElementById("map").innerHTML = map;
 
   // next 6 days forecast
@@ -92,10 +100,10 @@ export const generateForecast = (day) => {
 };
 
 export const printError = (error) => {
-  let errorMessage = `<h2>Your location could not be found, please try searching for a city instead.</h2>`;
-  let forecasetTitle = "";
+  let errorMessage = `<h2 class="noLocation">Your location could not be found, please try searching for a city instead.</h2>`;
 
-  document.getElementById("location").innerHTML = errorMessage;
+  document.getElementById("loading").innerHTML += errorMessage;
   document.getElementById("error").innerHTML = "";
   document.getElementById("sevenDayTitle").innerHTML = "";
+  document.getElementById("spinner").style.display = "none";
 };

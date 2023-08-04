@@ -58,6 +58,7 @@ async function getLocationFromPlace(userInput) {
 
 searchLocation.addEventListener("submit", (e) => {
   e.preventDefault();
+
   const inputData = new FormData(searchLocation);
   const inputEntry = Object.fromEntries(inputData);
   getLocationFromPlace(inputEntry.search);
