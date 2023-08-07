@@ -240,6 +240,12 @@ h3 {
   }
 }
 
+footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 0.9rem;
+}
+
 @media screen and (min-width: 450px) {
   .forecast {
     margin-top: 80px;
@@ -288,11 +294,19 @@ h3 {
       font-size: 1rem;
     }
   }
+
+  footer {
+    margin-top: 100px;
+  }
 }
 @media screen and (min-width: 1000px) {
   .search {
     input {
       font-size: 1rem;
     }
+  }
+
+  footer {
+    margin-top: 120px;
   }
 }
