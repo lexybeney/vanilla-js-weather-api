@@ -319,6 +319,10 @@ footer {
   font-size: 0.9rem;
 }
 
+footer a {
+  color: #e9e2d0;
+}
+
 @media screen and (min-width: 450px) {
   .forecast {
     margin-top: 80px;
