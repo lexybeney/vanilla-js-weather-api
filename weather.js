@@ -51,7 +51,7 @@ async function getLocationFromPlace(userInput) {
     );
     getWeatherData(coords.data[0].lat, coords.data[0].lon);
   } catch (error) {
-    let html = `<p>This doesn't look quite right, please try again.</p>`;
+    let html = `<p>That doesn't look quite right, please try again.</p>`;
     document.getElementById("error").innerHTML = html;
   }
 }

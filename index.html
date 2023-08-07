@@ -31,7 +31,7 @@
           />
         </form>
       </div>
-      <div id="error"></div>
+      <div id="error" class="error"></div>
       <div id="loading" class="loading">
         <h1>Lexy's Weather Channel</h1>
         <div id="spinner" class="lds-default">
@@ -50,19 +50,10 @@
         </div>
       </div>
       <div id="location" class="location"></div>
-      <div id="map" class="widescreen">
-        <!-- iframe map - not sure if needed any more - 500 x 400px  -->
-        <!-- <iframe
-          width="500"
-          height="400"
-          frameborder="0"
-          src="https://www.bing.com/maps/embed?h=400&w=500&cp=54.578348201391464~-4.080942938557087&lvl=5.080288782414221&typ=d&sty=r&src=SHELL&FORM=MBEDV8"
-          scrolling="no"
-        >
-        </iframe> -->
+      <div class="forecast">
+        <h2 class="forecastTitle" id="forecastTitle"></h2>
+        <div class="forecastDays" id="forecastDays"></div>
       </div>
-      <h2 id="sevenDayTitle"></h2>
-      <div id="forecastDays"></div>
     </div>
   </body>
 </html>

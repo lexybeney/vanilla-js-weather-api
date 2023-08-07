@@ -17,6 +17,7 @@ export const updateInterface = (
 
   // current day weather
   let html = `<h1>${location}</h1>
+              <h2 class="today">Today</h2>
         <div class="currentDetails">
           <div class="currentFirst">
           <h2 class="currentTemp" >${Math.round(data.current.temp)}&deg;</h2>
@@ -45,27 +46,18 @@ export const updateInterface = (
              </div>
         </div>`;
 
-  // let map = `<iframe
-  //     width="270"
-  //     height="280"
-  //     frameborder="0"
-  //     src="https://www.bing.com/maps/embed?h=400&w=500&cp=${latitude}~${longitude}&lvl=12.371139810340651&typ=d&sty=r&src=SHELL&FORM=MBEDV8"
-  //     scrolling="no"
-  //   >
-  //   </iframe>`;
-
   document.getElementById("location").innerHTML = html;
   document.getElementById("error").innerHTML = "";
   document.getElementById("loading").innerHTML = "";
   document.getElementById("loading").style.height = "0px";
-  // document.getElementById("map").innerHTML = map;
 
-  // next 6 days forecast
+  // next 7 days forecast
   let forecast = data.daily;
   let htmlForecast = "";
 
+  document.getElementById("forecastTitle").innerHTML = "Next 7 days";
   const sevenDays = forecast.splice(1, 7);
-  htmlForecast += `<h2 id="sevenDayTitle">The next seven days</h2>`;
+
   for (const day of sevenDays) {
     htmlForecast += generateForecast(day);
     document.getElementById("forecastDays").innerHTML = htmlForecast;
