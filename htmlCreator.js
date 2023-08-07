@@ -55,7 +55,7 @@ export const updateInterface = (
   let forecast = data.daily;
   let htmlForecast = "";
 
-  document.getElementById("forecastTitle").innerHTML = "Next 7 days";
+  document.getElementById("forecastTitle").innerHTML = "Next 7 Days";
   const sevenDays = forecast.splice(1, 7);
 
   for (const day of sevenDays) {

@@ -12,18 +12,18 @@ body {
   font-weight: 300;
 }
 
-body .pageContainer {
+.pageContainer {
   margin: 20px auto;
   max-width: 1100px;
 }
 
-body .pageContainer h1,
-body .pageContainer h2,
-body .pageContainer h3 {
+h1,
+h2,
+h3 {
   font-weight: 200;
 }
 
-body .pageContainer .search {
+.search {
   border-radius: 15px;
   max-width: 780px;
   margin: 0 auto;
@@ -36,59 +36,59 @@ body .pageContainer .search {
           align-items: center;
 }
 
-body .pageContainer .search img {
+.search img {
   height: 15px;
   margin: 0px 5px;
 }
 
-body .pageContainer .search input {
+.search input {
   border: none;
   background-color: transparent;
   color: #e9e2d0;
   font-family: "Roboto";
 }
 
-body .pageContainer .search input:focus {
+.search input:focus {
   outline: none;
 }
 
-body .pageContainer .search input::-webkit-input-placeholder {
+.search input::-webkit-input-placeholder {
   color: #e9e2d0;
   font-weight: 100;
 }
 
-body .pageContainer .search input:-ms-input-placeholder {
+.search input:-ms-input-placeholder {
   color: #e9e2d0;
   font-weight: 100;
 }
 
-body .pageContainer .search input::-ms-input-placeholder {
+.search input::-ms-input-placeholder {
   color: #e9e2d0;
   font-weight: 100;
 }
 
-body .pageContainer .search input::placeholder {
+.search input::placeholder {
   color: #e9e2d0;
   font-weight: 100;
 }
 
-body .pageContainer .error {
+.error {
   text-align: center;
 }
 
-body .pageContainer .loading {
+.loading {
   height: 100vh;
   text-align: center;
 }
 
-body .pageContainer .loading .lds-default {
+.loading .lds-default {
   display: inline-block;
   position: relative;
   width: 80px;
   height: 80px;
 }
 
-body .pageContainer .loading .lds-default div {
+.loading .lds-default div {
   position: absolute;
   width: 6px;
   height: 6px;
@@ -98,84 +98,84 @@ body .pageContainer .loading .lds-default div {
           animation: lds-default 1.2s linear infinite;
 }
 
-body .pageContainer .loading .lds-default div:nth-child(1) {
+.loading .lds-default div:nth-child(1) {
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
   top: 37px;
   left: 66px;
 }
 
-body .pageContainer .loading .lds-default div:nth-child(2) {
+.loading .lds-default div:nth-child(2) {
   -webkit-animation-delay: -0.1s;
           animation-delay: -0.1s;
   top: 22px;
   left: 62px;
 }
 
-body .pageContainer .loading .lds-default div:nth-child(3) {
+.loading .lds-default div:nth-child(3) {
   -webkit-animation-delay: -0.2s;
           animation-delay: -0.2s;
   top: 11px;
   left: 52px;
 }
 
-body .pageContainer .loading .lds-default div:nth-child(4) {
+.loading .lds-default div:nth-child(4) {
   -webkit-animation-delay: -0.3s;
           animation-delay: -0.3s;
   top: 7px;
   left: 37px;
 }
 
-body .pageContainer .loading .lds-default div:nth-child(5) {
+.loading .lds-default div:nth-child(5) {
   -webkit-animation-delay: -0.4s;
           animation-delay: -0.4s;
   top: 11px;
   left: 22px;
 }
 
-body .pageContainer .loading .lds-default div:nth-child(6) {
+.loading .lds-default div:nth-child(6) {
   -webkit-animation-delay: -0.5s;
           animation-delay: -0.5s;
   top: 22px;
   left: 11px;
 }
 
-body .pageContainer .loading .lds-default div:nth-child(7) {
+.loading .lds-default div:nth-child(7) {
   -webkit-animation-delay: -0.6s;
           animation-delay: -0.6s;
   top: 37px;
   left: 7px;
 }
 
-body .pageContainer .loading .lds-default div:nth-child(8) {
+.loading .lds-default div:nth-child(8) {
   -webkit-animation-delay: -0.7s;
           animation-delay: -0.7s;
   top: 52px;
   left: 11px;
 }
 
-body .pageContainer .loading .lds-default div:nth-child(9) {
+.loading .lds-default div:nth-child(9) {
   -webkit-animation-delay: -0.8s;
           animation-delay: -0.8s;
   top: 62px;
   left: 22px;
 }
 
-body .pageContainer .loading .lds-default div:nth-child(10) {
+.loading .lds-default div:nth-child(10) {
   -webkit-animation-delay: -0.9s;
           animation-delay: -0.9s;
   top: 66px;
   left: 37px;
 }
 
-body .pageContainer .loading .lds-default div:nth-child(11) {
+.loading .lds-default div:nth-child(11) {
   -webkit-animation-delay: -1s;
           animation-delay: -1s;
   top: 62px;
   left: 52px;
 }
 
-body .pageContainer .loading .lds-default div:nth-child(12) {
+.loading .lds-default div:nth-child(12) {
   -webkit-animation-delay: -1.1s;
           animation-delay: -1.1s;
   top: 52px;
@@ -210,40 +210,40 @@ body .pageContainer .loading .lds-default div:nth-child(12) {
   }
 }
 
-body .pageContainer .loading .noLocation {
+.loading .noLocation {
   font-size: 1rem;
 }
 
-body .pageContainer .location {
+.location {
   text-align: center;
   margin-bottom: 3rem;
 }
 
-body .pageContainer .location h1 {
+.location h1 {
   margin-top: 2rem;
   margin-bottom: 0;
 }
 
-body .pageContainer .location .today {
+.location .today {
   margin-top: 0;
   font-weight: 100;
   font-size: 1rem;
 }
 
-body .pageContainer .location img {
+.location img {
   width: 80px;
 }
 
-body .pageContainer .location .currentDetails {
+.location .currentDetails {
   margin: 5rem auto;
 }
 
-body .pageContainer .location .currentDetails h2 {
+.location .currentDetails h2 {
   font-size: 4rem;
   margin-bottom: 0;
 }
 
-body .pageContainer .location .currentDetails .currentFirst {
+.location .currentDetails .currentFirst {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -251,13 +251,13 @@ body .pageContainer .location .currentDetails .currentFirst {
   margin: 0 auto;
 }
 
-body .pageContainer .location .currentDetails .currentFirst .currentIcon {
+.location .currentDetails .currentFirst .currentIcon {
   position: absolute;
   top: -30px;
   left: -70px;
 }
 
-body .pageContainer .location .extraDetails {
+.location .extraDetails {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -267,27 +267,28 @@ body .pageContainer .location .extraDetails {
   margin: 0 auto;
 }
 
-body .pageContainer .location .extraDetails .currentLow {
+.location .extraDetails .currentLow {
   min-width: 30px;
 }
 
-body .pageContainer .location .extraDetails div {
+.location .extraDetails div {
   margin: 0 20px;
 }
 
-body .pageContainer .forecast {
+.forecast {
   margin: 0 auto 3rem auto;
   max-width: -webkit-min-content;
   max-width: -moz-min-content;
   max-width: min-content;
 }
 
-body .pageContainer .forecast .forecastTitle {
+.forecast .forecastTitle {
   margin-left: 10px;
   margin-bottom: 0;
+  font-size: 1.3rem;
 }
 
-body .pageContainer .forecast .forecastDays {
+.forecast .forecastDays {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -298,7 +299,7 @@ body .pageContainer .forecast .forecastDays {
   margin: 0 auto;
 }
 
-body .pageContainer .forecast .forecastDays div {
+.forecast .forecastDays div {
   margin: 0 6px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -310,5 +311,46 @@ body .pageContainer .forecast .forecastDays div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 450px) {
+  .forecast {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .location h1 {
+    font-size: 3rem;
+  }
+  .location .today {
+    font-size: 1.4rem;
+  }
+  .location .currentDetails h2 {
+    font-size: 5rem;
+  }
+  .location p {
+    font-size: 1.3rem;
+  }
+  .forecast .forecastTitle {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+  }
+  .forecast .forecastDays div {
+    margin: 0 10px;
+  }
+  .forecast h3 {
+    font-size: 1.3rem;
+  }
+  .forecast p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .search input {
+    font-size: 1rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
